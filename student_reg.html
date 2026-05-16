@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="navbar">
+            <div><img src="logo.png" alt="TNTS" width="50px" height="50px"></div>
+            <h1>TNTS NEXUS</h1>
+        </header>
+    
+    <a href="index.html" class="back-btn">Back to Home ></a>
+</div>
+    <div class="tab-row">
+        <a href="student_reg.html" class="tab-item tab-selected">Student</a>
+        <a href="teacher_reg.html" class="tab-item tab-unselected">Teacher</a>
+    </div>
+
+  <div class="outer-frame">
+   
+    <div id="input-section" class="inner-form">
+        <h3 style="border-bottom: 2px solid black; padding-bottom: 8px;">Student Information</h3>
+        <div class="form-grid">
+            
+            <div class="field"><label>Surname:</label><input type="text" id="in-surname"></div>
+            <div class="field"><label>Given Name:</label><input type="text" id="in-given"></div>
+            <div class="field"><label>Middle Name:</label><input type="text" id="in-middle"></div>
+
+            
+            <div class="field">
+                <label>Sex:</label>
+                <select id="in-sex">
+                    <option value="">Please Choose...</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="field"><label>LRN:</label><input type="text" id="in-lrn"></div>
+            <div class="field"><label>Guardian's Contact No.:</label><input type="text" id="in-contact"></div>
+
+       
+            <div class="field">
+                <label>Track:</label>
+                <select id="trackSelect" onchange="toggleSection()">
+                    <option value="">Please Choose...</option>
+                    <option value="Academic">Academic</option>
+                    <option value="TVL">TVL</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Section:</label>
+                <select id="sectionSelect" class="locked" disabled>
+                    <option value="">Please Choose...</option>
+                    <option value="Section A">Section A</option>
+                    <option value="Section B">Section B</option>
+                </select>
+            </div>
+            <div class="field"><label>Email:</label><input type="email" id="in-email"></div>
+        </div>
+    </div>
+
+    
+    <div id="confirm-section" class="inner-form hidden">
+        <h3 style="border-bottom: 2px solid black; padding-bottom: 8px;">Student Information</h3>
+        <div class="confirm-grid" id="confirm-data">
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span>ⓘ Remember to double check the forms before proceeding.</span>
+        </div>
+        <div>
+            <button class="next-btn hidden" id="back-to-form" onclick="showForm()">Back</button>
+            <button class="next-btn" id="main-next-btn" onclick="showConfirmation()">Next</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="success-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Account Created Successfully!</h2>
+        <p>Please check if the information is correct before exiting the tab.</p>
+        <button class="ok-btn" onclick="closeModal()">OK</button>
+    </div>
+</div>
+<script src="script.js"></script>
+<body>
+<html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+            <div><img src="logo.png" alt="TNTS" width="50px" height="50px"></div>
+            <h1>TNTS NEXUS</h1>
+        </header>
+  
+    <a href="index.html" class="back-btn">Back to Home ></a>
+</div>
+
+    <div class="tab-row">
+        <a href="student_reg.html" class="tab-item tab-unselected">Student</a>
+        <a href="teacher_reg.html" class="tab-item tab-selected">Teacher</a>
+    </div>
+
+<div class="outer-frame">
+    <div id="input-section" class="inner-form">
+        <h3 style="border-bottom: 2px solid black; padding-bottom: 8px;">Teacher Information</h3>
+        <div class="form-grid">
+            <div class="field"><label>Surname:</label><input type="text" id="t-surname"></div>
+            <div class="field"><label>Given Name:</label><input type="text" id="t-given"></div>
+            <div class="field"><label>Middle Name:</label><input type="text" id="t-middle"></div>
+            
+            <div class="field">
+                <label>Sex:</label>
+                <select id="t-sex">
+                    <option value="">Please Choose...</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Department:</label>
+                <select id="t-dept">
+                    <option value="">Please Choose...</option>
+                    <option value="English Department">English Department</option>
+                    <option value="IT Department">IT Department</option>
+                </select>
+            </div>
+            <div class="field"><label>DepEd Email:</label><input type="email" id="t-email"></div>
+        </div>
+    </div>
+
+  
+    <div id="confirm-section" class="inner-form hidden">
+        <h3 style="border-bottom: 2px solid black; padding-bottom: 8px;">Teacher Information</h3>
+        <div class="confirm-grid" id="confirm-data-teacher">
+      
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <span>ⓘ Remember to double check the forms before proceeding.</span>
+        <div>
+            <button class="next-btn hidden" id="back-to-form" onclick="showForm()">Back</button>
+            <button class="next-btn" id="main-next-btn" onclick="showTeacherConfirmation()">Next</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="success-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Account Created Successfully!</h2>
+        <p>Please check if the information is correct before exiting the tab.</p>
+        <button class="ok-btn" onclick="closeModal()">OK</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
